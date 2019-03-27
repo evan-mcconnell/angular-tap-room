@@ -8,17 +8,17 @@ import { kegData } from '../keg/keg-data';
   templateUrl: './keg-list.component.html',
   styleUrls: ['./keg-list.component.css']
 })
-export class KegListComponent implements OnInit {
-  public kegs= kegData;
-  constructor() { }
-  ngOnInit() {
-    // this.getKegs();
-    console.log(this.kegs);
+export class KegListComponent{
+  public kegs: Keg[] = kegData;
+  constructor() {
   }
+  // ngOnInit() {
+  //   this.getKegs();
+  //   console.log(this.kegs);
+  // }
   // getKegs() {
-  //   for ( let keg of kegData) {
-  //     this.kegs.push(new KegComponent(keg));
+  //   for (let keg of kegData) {
+  //     this.kegs.push(new Keg());
   //   }
   // }
-
 }

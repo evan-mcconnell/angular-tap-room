@@ -8,17 +8,13 @@ import { Keg } from '../models/kegModel';
 })
 
 export class KegComponent implements OnInit {
-  // public pints: number = 124;
-  public name: string;
-  public brand: string;
-  public price: number;
-  public alcoholContent: number;
-  public type: string;
-  @Input() data:Keg;
-  constructor() {
-  }
+  public pints: number = 124;
+  @Input() data: Keg;
+  constructor() {}
 
   ngOnInit() {
   }
+
+  
 
 }
