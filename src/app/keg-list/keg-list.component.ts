@@ -12,13 +12,13 @@ export class KegListComponent{
   public kegs: Keg[] = kegData;
   constructor() {
   }
-  // ngOnInit() {
-  //   this.getKegs();
-  //   console.log(this.kegs);
-  // }
-  // getKegs() {
-  //   for (let keg of kegData) {
-  //     this.kegs.push(new Keg());
-  //   }
-  // }
+  addKeg(){
+    this.kegs.push({
+      name: "Hoppathon",
+      brand: "Brew Hop",
+      price: 5,
+      alcoholContent: 5.5,
+      type: "IPA"
+    })
+  }
 }
