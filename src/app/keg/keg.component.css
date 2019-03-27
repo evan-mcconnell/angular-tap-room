@@ -1,0 +1,43 @@
+.keg{
+  border:1px solid black;
+  text-align:center;
+  padding:10px;
+}
+
+#kegFillArea {
+  width: 20px;
+  height: 200px;
+  border: 2px solid black;
+  position: relative;
+}
+
+#kegFill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.new-keg {
+  background-color: teal;
+  height: 100%;
+}
+
+.full-keg {
+  background-color: green;
+  height: 80%;
+}
+
+.med-keg {
+  background-color: orange;
+  height: 50%;
+}
+
+.low-keg {
+  background-color: red;
+  height: 10%;
+}
+
+img{
+  width: 100px;
+}
