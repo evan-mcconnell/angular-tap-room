@@ -16,4 +16,8 @@ export class KegListComponent{
     this.kegs.push(newKeg)
     console.log("addKegToList", this.kegs)
   }
+  removeKeg(id){
+    this.kegs.splice(id,1);
+    console.log("remove Keg~!")
+  }
 }

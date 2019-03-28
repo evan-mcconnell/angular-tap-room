@@ -6,7 +6,7 @@
   <label for="priceInput">Price</label>
   <input id="priceInput" type="number" [(ngModel)]='newKeg.price' name="price">
   <label for="alcoholContentInput">ABV</label>
-  <input id="alcoholContentInput" type="number" [(ngModel)]='newKeg.alcoholContent' name="alcoholContent">
+  <input id="alcoholContentInput" type="number" min="0" max="1" step="0.001" [(ngModel)]='newKeg.alcoholContent' name="alcoholContent">
   <label for="typeInput">Type</label>
   <input id="typeInput" type="text" [(ngModel)]='newKeg.type' name="type">
   <button (click)='addKeg()'>Add Keg</button>

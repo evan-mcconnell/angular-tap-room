@@ -1,6 +1,6 @@
 .keg{
   display:grid;
-  grid-template-columns:20% 80%;
+  grid-template-columns: 20% 80%;
   grid-template-rows: 8vw 14vw 6vw;
   border:1px solid black;
   text-align:center;
@@ -22,7 +22,7 @@
 }
 
 .drink-type{
-  position:relative;
+  position: relative;
 }
 
 .drink-type p{
@@ -39,12 +39,24 @@
 .content{
   grid-area: 2 / 2 / 3 / 3;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
 }
 
 #edit-content {
   flex-direction: column;
 }
+
+#edit-content p {
+  padding: 0;
+  margin: 0;
+}
+
+#edit-content h3 {
+  padding: 0;
+  margin-bottom: 3px;
+}
+
 #kegFillArea {
   grid-area:2 / 1 / 4 / 1;
   width: 20px;
@@ -80,7 +92,16 @@
   height: 10%;
 }
 
-img{
+img {
   margin: 20% 0;
-  height: 60%;
+  height: 80px;
+  width: 120px;
+}
+
+#sell {
+  margin: auto;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #b1d1ca;
 }

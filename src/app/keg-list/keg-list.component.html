@@ -1,5 +1,5 @@
 <button type="button" name="button" (click)="showForm = !showForm">+</button>
 <app-keg-form *ngIf="showForm" (clickSender)="addKegToList($event)"></app-keg-form>
 <div class="keg-list">
-  <app-keg *ngFor="let keg of kegs" [data]="keg"></app-keg>
+  <app-keg *ngFor="let keg of kegs; let i = index" [data]="keg" [id]="i" (kegTapper)="removeKeg($event)"></app-keg>
 </div>

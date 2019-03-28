@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Keg } from '../models/kegModel';
 
 @Component({
@@ -11,10 +11,13 @@ export class KegComponent implements OnInit {
   public pints: number = 124;
 
   @Input() data: Keg;
+  @Input() id: number;
+  @Output() kegTapper = new EventEmitter();
   constructor() {}
 
   ngOnInit() {
     console.log(this.data);
+    console.log("index", this.id)
   }
 
   sellPint(){
@@ -42,5 +45,9 @@ export class KegComponent implements OnInit {
     } else if (this.data.type === "Kombucha") {
       return '../assets/Kombucha.jpg';
     }
+  }
+  deleteKeg() {
+    this.kegTapper.emit(this.id);
+    console.log("delete Keg?");
   }
 }

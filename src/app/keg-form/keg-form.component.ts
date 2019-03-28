@@ -12,9 +12,9 @@ export class KegFormComponent{
   @Output() clickSender = new EventEmitter();
 
   addKeg(){
-
     console.log("addkeg", this.newKeg)
     this.clickSender.emit(this.newKeg);
     this.newKeg={};
   }
+  
 }

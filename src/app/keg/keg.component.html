@@ -12,18 +12,21 @@
       <img [src]="drinkIcon()">
     </div>
     <div class="price-abv">
-      <p>${{data.price}}</p>
-      <p>{{data.alcoholContent}}%</p>
+      <p>{{data.price | currency }}</p>
+      <p>{{data.alcoholContent | percent : '1.0-2' }}</p>
     </div>
   </div>
 
+
   <div class="content" id="edit-content" *ngIf="editMode">
+
+    <button type="button" name="button" (click)="deleteKeg()">Delete Keg</button>
     <div>
       <h3><input type="text" [(ngModel)]="data.name"></h3>
       <p><input type="text" [(ngModel)]="data.brand"></p>
     </div>
     <p><input type="number" [(ngModel)]="data.price"></p>
-    <p><input type="number" [(ngModel)]="data.alcoholContent"></p>
+    <p><input type="number" min="0" max="1" step="0.001" [(ngModel)]="data.alcoholContent"></p>
     <p><input type="text" [(ngModel)]="data.type"></p>
   </div>
   <button id="sell" type="button" (click)="sellPint()">Sell Pint</button>
