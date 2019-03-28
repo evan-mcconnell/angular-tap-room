@@ -1,13 +1,13 @@
 <form>
   <label for="nameInput">Name</label>
-  <input id="nameInput" type="text">
+  <input id="nameInput" type="text" [(ngModel)]='newKeg.name' name="name">
   <label for="brandInput">Brand</label>
-  <input id="brandInput" type="text">
+  <input id="brandInput" type="text" [(ngModel)]='newKeg.brand' name="brand">
   <label for="priceInput">Price</label>
-  <input id="priceInput" type="number">
+  <input id="priceInput" type="number" [(ngModel)]='newKeg.price' name="price">
   <label for="alcoholContentInput">ABV</label>
-  <input id="alcoholContentInput" type="number">
+  <input id="alcoholContentInput" type="number" [(ngModel)]='newKeg.alcoholContent' name="alcoholContent">
   <label for="typeInput">Type</label>
-  <input id="typeInput" type="text">
-  <button (click)='addKeg(keg)'>Add Keg</button>
+  <input id="typeInput" type="text" [(ngModel)]='newKeg.type' name="type">
+  <button (click)='addKeg()'>Add Keg</button>
 </form>

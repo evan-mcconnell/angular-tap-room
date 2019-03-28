@@ -7,11 +7,14 @@ import { Keg } from '../models/kegModel';
   styleUrls: ['./keg-form.component.css']
 })
 export class KegFormComponent{
-  newKeg:Keg;
+  newKeg = {}
+
   @Output() clickSender = new EventEmitter();
-  addKeg(keg){
 
-    this.clickSender.emit(keg);
+  addKeg(){
 
+    console.log("addkeg", this.newKeg)
+    this.clickSender.emit(this.newKeg);
+    this.newKeg={};
   }
 }

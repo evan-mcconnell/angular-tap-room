@@ -1,11 +1,20 @@
 
 <div class="keg">
-
-  <h3>{{data.name}}</h3>
-  <p>{{data.brand}}</p>
-  <p>${{data.price}}</p>
-  <p>{{data.alcoholContent}}%</p>
-  <p>{{data.type}}</p>
+  <button type="button" name="button" (click)="editMode=!editMode">Edit</button>
+  <div *ngIf="!editMode">
+    <h3>{{data.name}}</h3>
+    <p>{{data.brand}}</p>
+    <p>${{data.price}}</p>
+    <p>{{data.alcoholContent}}%</p>
+    <p>{{data.type}}</p>
+  </div>
+  <div *ngIf="editMode">
+    <h3><input type="text" [(ngModel)]="data.name"></h3>
+    <p><input type="text" [(ngModel)]="data.brand"></p>
+    <p><input type="number" [(ngModel)]="data.price"></p>
+    <p><input type="number" [(ngModel)]="data.alcoholContent"></p>
+    <p><input type="text" [(ngModel)]="data.type"></p>
+  </div>
   <img [src]="drinkIcon()">
   <p>{{pints}}</p>
   <button type="button" (click)="sellPint()">Sell Pint</button>

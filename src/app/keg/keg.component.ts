@@ -9,6 +9,7 @@ import { Keg } from '../models/kegModel';
 
 export class KegComponent implements OnInit {
   public pints: number = 124;
+
   @Input() data: Keg;
   constructor() {}
 
@@ -19,6 +20,7 @@ export class KegComponent implements OnInit {
   sellPint(){
     this.pints--;
   }
+
   displayFill(){
     if (this.pints===124){
       return 'new-keg';
