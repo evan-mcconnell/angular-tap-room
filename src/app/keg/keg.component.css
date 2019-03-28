@@ -1,12 +1,54 @@
 .keg{
+  display:grid;
+  grid-template-columns:20% 80%;
+  grid-template-rows: 8vw 14vw 6vw;
   border:1px solid black;
   text-align:center;
   padding:10px;
 }
 
+
+
+#sell{
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.keg-name{
+  grid-area: 1 / 1 / 2 / 3;
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.drink-type{
+  position:relative;
+}
+
+.drink-type p{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background-color:white;
+  padding:5px;
+  border-radius:5px;;
+  margin:0;
+}
+
+.content{
+  grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  justify-content: space-around;
+}
+
+#edit-content {
+  flex-direction: column;
+}
 #kegFillArea {
+  grid-area:2 / 1 / 4 / 1;
   width: 20px;
-  height: 200px;
+  height: 90%;
   border: 2px solid black;
   position: relative;
 }
@@ -39,5 +81,6 @@
 }
 
 img{
-  width: 100px;
+  margin: 20% 0;
+  height: 60%;
 }
